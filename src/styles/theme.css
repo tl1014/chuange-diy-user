@@ -1,0 +1,60 @@
+:root {
+    --bg-sand: #F6F2EA;
+    --bg-page: #F7F4EE;
+    --bg-card: #FAF8F5;
+    --bg-surface: #FFFFFF;
+    --walnut-deep: #2C1E16;
+    --walnut-mid: #6A4B35;
+    --walnut-light: #8C6B52;
+    --border-warm: #E5DEC9;
+    --border-subtle: #EEE8DF;
+    --text-muted: #8C8275;
+    --text-soft: #A49A8C;
+
+    --font-cormorant: Georgia, "Times New Roman", serif;
+    --font-noto-serif: "Songti SC", "SimSun", serif;
+    --font-jakarta: -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", sans-serif;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background: var(--bg-page);
+    color: var(--walnut-deep);
+    font-family: var(--font-jakarta), sans-serif;
+    -webkit-font-smoothing: antialiased;
+}
+
+button,
+input,
+select,
+textarea {
+    font-family: var(--font-jakarta), sans-serif;
+}
+
+button {
+    cursor: pointer;
+}
+
+.font-editorial {
+    font-family: var(--font-cormorant), var(--font-noto-serif), Georgia, serif;
+}
+
+.font-sans-clean {
+    font-family: var(--font-jakarta), sans-serif;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        transition-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
+    }
+}
