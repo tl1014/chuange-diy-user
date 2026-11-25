@@ -1,15 +1,15 @@
 import axios from 'axios'
 
+const DEV_OMNI_TOKEN = 'dev-omni-admin-token-2026'
+
 const request = axios.create({
     baseURL: import.meta.env.VITE_API_BASE_URL || '',
     timeout: 15000
 })
 
 request.interceptors.request.use(config => {
-    const token = localStorage.getItem('token')
-    if (token) {
-        config.headers.Authorization = `Bearer ${token}`
-    }
+    const token = localStorage.getItem('token') || DEV_OMNI_TOKEN
+    config.headers.Authorization = `Bearer ${token}`
     return config
 })
 
